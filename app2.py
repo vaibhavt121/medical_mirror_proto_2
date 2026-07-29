@@ -13,7 +13,7 @@ import io
 from PIL import Image, ImageOps, ImageDraw
 import streamlit as st
 
-st.set_page_config(page_title="MirrorLine — Clinical Mirror Imaging",
+st.set_page_config(page_title="MirrorLine — for Dr. Anand",
                    page_icon="🪞", layout="wide")
 
 # ----------------------------- styling -----------------------------
