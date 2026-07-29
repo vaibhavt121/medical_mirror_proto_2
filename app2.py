@@ -13,7 +13,7 @@ import io
 from PIL import Image, ImageOps, ImageDraw
 import streamlit as st
 
-st.set_page_config(page_title="MirrorLine — Clinical Mirror Imaging",
+st.set_page_config(page_title="MirrorLine for Dr. Anand — Clinical Mirror Imaging",
                    page_icon="🪞", layout="wide")
 
 # ----------------------------- styling -----------------------------
@@ -33,7 +33,8 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown("# Mirror<span class='ml-accent'>Line</span>", unsafe_allow_html=True)
+st.markdown("# Mirror<span class='ml-accent'>Line</span> for Dr. Anand",
+            unsafe_allow_html=True)
 st.markdown("<span class='ml-tag'>Clinical mirror imaging · runs on device</span>",
             unsafe_allow_html=True)
 
