@@ -29,12 +29,26 @@ st.markdown("""
                color:#8A9AA8; border:1px solid #28353F; border-radius:8px;
                padding:.5rem .8rem; display:inline-block;}
   div[data-testid="stFileUploaderDropzone"] {background:#121A22; border:1px dashed #28353F;}
+  /* Red, clearly-visible Upload button inside the dropzone */
+  [data-testid="stFileUploaderDropzone"] button {
+      background:#E03A2F !important; color:#FFFFFF !important;
+      border:1px solid #E03A2F !important; border-radius:9px !important;
+      font-weight:700 !important; opacity:1 !important;
+  }
+  [data-testid="stFileUploaderDropzone"] button:hover {
+      background:#C42C22 !important; border-color:#C42C22 !important; color:#FFFFFF !important;
+  }
+  [data-testid="stFileUploaderDropzone"] button * {color:#FFFFFF !important;}
   .stDownloadButton button, .stButton button {border-radius:10px; font-weight:600;}
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown("# Mirror<span class='ml-accent'>Line</span> for Dr. Anand",
-            unsafe_allow_html=True)
+st.markdown(
+    "<h1 style='margin-bottom:.1rem;'>"
+    "Mirror<span class='ml-accent'>Line</span>"
+    "<span style='color:#8A9AA8; font-weight:400;'> for Dr. Anand</span>"
+    "</h1>",
+    unsafe_allow_html=True)
 st.markdown("<span class='ml-tag'>Clinical mirror imaging · runs on device</span>",
             unsafe_allow_html=True)
 
@@ -103,11 +117,6 @@ with st.sidebar:
              "composite joins the image to its mirror for mirror-therapy views.",
     )
     show_axis = st.checkbox("Show reflection axis (preview only)", value=True)
-    st.markdown("---")
-    st.markdown(
-        "<span class='ml-privacy'>⬤ Processing is local to this machine.<br>"
-        "For patient images, do not deploy on a public host.</span>",
-        unsafe_allow_html=True)
 
 uploaded = st.file_uploader("Load an image", type=["jpg", "jpeg", "png", "webp", "bmp"])
 
