@@ -13,7 +13,7 @@ import io
 from PIL import Image, ImageOps, ImageDraw
 import streamlit as st
 
-st.set_page_config(page_title="MirrorLine — for Dr. Anand",
+st.set_page_config(page_title="MirrorLine — Clinical Mirror Imaging",
                    page_icon="🪞", layout="wide")
 
 # ----------------------------- styling -----------------------------
@@ -104,7 +104,8 @@ with st.sidebar:
     show_axis = st.checkbox("Show reflection axis (preview only)", value=True)
     st.markdown("---")
     st.markdown(
-        "",
+        "<span class='ml-privacy'>⬤ Processing is local to this machine.<br>"
+        "For patient images, do not deploy on a public host.</span>",
         unsafe_allow_html=True)
 
 uploaded = st.file_uploader("Load an image", type=["jpg", "jpeg", "png", "webp", "bmp"])
